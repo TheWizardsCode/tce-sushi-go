@@ -12,16 +12,16 @@
 
 import { writeFileSync, mkdirSync } from 'fs';
 import { dirname, resolve } from 'path';
-import { createSeededRng } from '../src/core-engine/SeededRng';
+import { createSeededRng } from '../../../src/core-engine/SeededRng';
 import {
   setupSushiGoGame,
   executeAllPicks,
   scoreRound,
   isGameOver,
   getWinnerIndex,
-} from '../example-games/sushi-go/SushiGoGame';
-import { SushiGoAiPlayer, GreedyStrategy } from '../example-games/sushi-go/AiStrategy';
-import { SushiGoTranscriptRecorder } from '../example-games/sushi-go/GameTranscript';
+} from '../SushiGoGame';
+import { SushiGoAiPlayer, GreedyStrategy } from '../AiStrategy';
+import { SushiGoTranscriptRecorder } from '../GameTranscript';
 
 // Deterministic RNG
 const rng = createSeededRng(42);
