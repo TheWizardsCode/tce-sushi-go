@@ -10,7 +10,7 @@ import {
   cardLabel,
   DECK_SIZE,
   ROUND_COUNT,
-} from '../../example-games/sushi-go/SushiGoCards';
+} from '../../src/SushiGoCards';
 
 describe('SushiGoCards', () => {
   describe('createSushiGoDeck', () => {

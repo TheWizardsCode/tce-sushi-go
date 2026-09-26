@@ -11,8 +11,8 @@ import {
   scorePudding,
   countMakiIcons,
   countPudding,
-} from '../../example-games/sushi-go/SushiGoScoring';
-import type { SushiGoCard } from '../../example-games/sushi-go/SushiGoCards';
+} from '../../src/SushiGoScoring';
+import type { SushiGoCard } from '../../src/SushiGoCards';
 
 // ── Helpers ──────────────────────────────────────────────────
 

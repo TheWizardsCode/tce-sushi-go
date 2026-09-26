@@ -7,9 +7,9 @@ import {
   RandomStrategy,
   GreedyStrategy,
   SushiGoAiPlayer,
-} from '../../example-games/sushi-go/AiStrategy';
-import type { SushiGoCard } from '../../example-games/sushi-go/SushiGoCards';
-import type { SushiGoPlayerState } from '../../example-games/sushi-go/SushiGoGame';
+} from '../../src/AiStrategy';
+import type { SushiGoCard } from '../../src/SushiGoCards';
+import type { SushiGoPlayerState } from '../../src/SushiGoGame';
 
 // ── Helpers ──────────────────────────────────────────────────
 

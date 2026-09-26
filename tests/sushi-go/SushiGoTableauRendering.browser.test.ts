@@ -19,7 +19,7 @@ async function bootGame(): Promise<Phaser.Game> {
   document.body.appendChild(container);
 
   const { createSushiGoGame } = await import(
-    '../../example-games/sushi-go/createSushiGoGame'
+    '../../src/createSushiGoGame'
   );
   const game = createSushiGoGame({ type: Phaser.CANVAS });
   await waitForScene(game, 'SushiGoScene');

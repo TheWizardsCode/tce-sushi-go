@@ -2,9 +2,9 @@ import { describe, it, expect } from 'vitest';
 import {
   setupSushiGoGame,
   executeAllPicks,
-} from '../example-games/sushi-go/SushiGoGame';
-import { scoreTableauBreakdown } from '../example-games/sushi-go/SushiGoScoring';
-import type { PickAction } from '../example-games/sushi-go/SushiGoGame';
+} from '../src/SushiGoGame';
+import { scoreTableauBreakdown } from '../src/SushiGoScoring';
+import type { PickAction } from '../src/SushiGoGame';
 
 describe('Sushi Go! - Wasabi pairing & Chopsticks selection order', () => {
   it('pairs wasabi with the next nigiri in play order', () => {

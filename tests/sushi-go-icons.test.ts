@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest';
 import fs from 'fs';
 import path from 'path';
-import { getIconKeyForCard } from '../example-games/sushi-go/IconMap';
-import { createSushiGoDeck } from '../example-games/sushi-go/SushiGoCards';
+import { getIconKeyForCard } from '../src/IconMap';
+import { createSushiGoDeck } from '../src/SushiGoCards';
 
 describe('sushi-go icons', () => {
   it('all IconMap filenames exist in public assets', () => {

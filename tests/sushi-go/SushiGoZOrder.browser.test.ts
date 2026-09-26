@@ -27,7 +27,7 @@ async function bootGame(): Promise<Phaser.Game> {
   container.id = 'game-container';
   document.body.appendChild(container);
 
-  const { createSushiGoGame } = await import('../../example-games/sushi-go/createSushiGoGame');
+  const { createSushiGoGame } = await import('../../src/createSushiGoGame');
   const game = createSushiGoGame({ type: Phaser.CANVAS });
   await waitForScene(game, 'SushiGoScene');
   // Wait for ensureIconTextures().finally() to settle before returning,

@@ -79,7 +79,7 @@ import {
   // Suggest highlight
   CHOPSTICKS_SUGGEST_HIGHLIGHT_COLOR,
   CHOPSTICKS_SUGGEST_HIGHLIGHT_ALPHA,
-} from '../../example-games/sushi-go/scenes/SushiGoConstants';
+} from '../../src/scenes/SushiGoConstants';
 
 describe('SushiGoConstants', () => {
   describe('label constants', () => {

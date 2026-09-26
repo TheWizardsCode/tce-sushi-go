@@ -4,8 +4,8 @@ import {
   computeEncounterOrder,
   computeTableauLayout,
   pairWasabiNigiri,
-} from '../../example-games/sushi-go/scenes/SushiGoTableauHelpers';
-import type { SushiGoCard } from '../../example-games/sushi-go/SushiGoCards';
+} from '../../src/scenes/SushiGoTableauHelpers';
+import type { SushiGoCard } from '../../src/SushiGoCards';
 
 function card(id: number, type: SushiGoCard['type'], icons: 1 | 2 | 3 = 1): SushiGoCard {
   switch (type) {

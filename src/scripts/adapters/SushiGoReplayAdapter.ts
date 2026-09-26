@@ -10,7 +10,7 @@
  * Turns are stored flat in `transcript.turns[]`.
  *
  * @see ReplayAdapter  -- interface definition
- * @see example-games/sushi-go/GameTranscript.ts  -- transcript types
+ * @see src/GameTranscript.ts  -- transcript types
  *
  * Related work items:
  * - CG-0MM0GQSNL0MRSGL0 (Sushi Go replay adapter)

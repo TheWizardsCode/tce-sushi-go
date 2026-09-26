@@ -9,7 +9,7 @@ async function bootGame(): Promise<Phaser.Game> {
   container.id = 'game-container';
   document.body.appendChild(container);
 
-  const { createSushiGoGame } = await import('../../example-games/sushi-go/createSushiGoGame');
+  const { createSushiGoGame } = await import('../../src/createSushiGoGame');
   const game = createSushiGoGame({ type: Phaser.CANVAS });
   await waitForScene(game, 'SushiGoScene');
   return game;
@@ -51,7 +51,7 @@ describe('Sushi Go pudding final scoring', () => {
     scene.session.players[1].tableau = [];
 
     // Now invoke scoring
-    const { scoreRound } = await import('../../example-games/sushi-go/SushiGoGame');
+    const { scoreRound } = await import('../../src/SushiGoGame');
     const result = scoreRound(scene.session);
 
     // Expect puddingCounts to reflect 2 and 0

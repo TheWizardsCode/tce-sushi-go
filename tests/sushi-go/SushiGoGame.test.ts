@@ -11,10 +11,10 @@ import {
   getWinnerIndex,
   isRoundPickingDone,
   validatePick,
-} from '../../example-games/sushi-go/SushiGoGame';
+} from '../../src/SushiGoGame';
 import type {
   SushiGoPlayerState,
-} from '../../example-games/sushi-go/SushiGoGame';
+} from '../../src/SushiGoGame';
 
 // Deterministic RNG for reproducible tests
 function makeRng(seed: number = 42) {
