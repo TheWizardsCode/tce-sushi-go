@@ -15,6 +15,7 @@ import {
   gameDiscoveryPlugin,
   resolveCoreAliases,
 } from './core/scripts/vite-game-discovery-plugin';
+import { DEV_WATCH_IGNORE_PATTERNS } from './core/scripts/vite-transcript-plugin';
 
 const coreRoot = path.resolve(__dirname, './core');
 const pkg = JSON.parse(
@@ -49,6 +50,13 @@ export default defineConfig(({ mode }) => ({
   server: {
     port: 3000,
     open: false,
+    watch: {
+      // Exclude dev-output trees and .worklog/ worktree checkouts from the
+      // file watcher. Recursive watches into .worklog/worktrees exhaust
+      // fs.inotify.max_user_watches (ENOSPC), crashing the dev server
+      // on startup.
+      ignored: [...DEV_WATCH_IGNORE_PATTERNS],
+    },
   },
   test: {
     projects: [
