@@ -51,10 +51,11 @@ export default defineConfig(({ mode }) => ({
     port: 3000,
     open: false,
     watch: {
-      // Exclude dev-output trees and .worklog/ worktree checkouts from the
-      // file watcher. Recursive watches into .worklog/worktrees exhaust
-      // fs.inotify.max_user_watches (ENOSPC), crashing the dev server
-      // on startup.
+      // Exclude dev-output trees and the .worklog/ worktree checkouts from the
+      // file watcher. .worklog/worktrees are symlinks into other full project
+      // checkouts (including a game <-> Tableau-Card-Engine cycle), so a
+      // recursive watch walks tens of thousands of directories and exhausts
+      // fs.inotify.max_user_watches (ENOSPC), crashing the dev server on startup.
       ignored: [...DEV_WATCH_IGNORE_PATTERNS],
     },
   },
